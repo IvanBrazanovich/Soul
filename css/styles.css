@@ -1,0 +1,446 @@
+/* 
+
+--Font sizes
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62/  74 / 86/  98
+
+
+--FONT WEIGHTS
+Default: 400
+
+
+
+
+
+--COLORS 
+Primary green: #129A7D
+  background-color: rgba(18, 154, 125, 0.2);
+Secondary green: #9BD3CB
+Primary pink: #FCBCBC
+Secondary pink: #FADAE2
+Tertiary pink: #F39CA4
+Primary grey: #555
+
+
+-Shadows 
+
+
+
+
+--BORDER RADIUS
+  border-radius: 6px;
+
+
+--SPACING SYSTEM
+*/
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: 0;
+}
+
+body {
+  font-family: "Noto Sans", sans-serif;
+  line-height: 1;
+  font-weight: 400;
+  color: #555;
+}
+
+html {
+  /* Lo que hace es poner que el font-size sea 62.5% del font-size default que tiene el usuario en su máquina */
+  font-size: 62.5%;
+}
+
+/********************* 
+*     Reusables
+**********************/
+
+.heading-primary {
+  font-size: 5.2rem;
+  color: #555;
+  letter-spacing: -1px;
+}
+
+.heading-tertiary {
+  font-size: 3.2rem;
+  color: #555;
+}
+
+.mg-bottom-sm {
+  margin-bottom: 2.4rem;
+}
+
+.mg-bottom-md {
+  margin-bottom: 4.8rem;
+}
+
+.mg-bottom-lg {
+  margin-bottom: 6.4rem;
+}
+
+.mg-top-sm {
+  margin-top: 2.4rem;
+}
+
+.mg-top-md {
+  margin-top: 4.8rem;
+}
+
+.hero-fragances {
+  font-size: 2.4rem;
+}
+
+.mg-top-lg {
+  margin-top: 6.4rem;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.bg-green {
+  background-color: #129a7d;
+}
+
+.bg-yellow {
+  background-color: rgba(255, 255, 6, 0.781);
+}
+
+.bg-pink {
+  background-color: rgba(250, 218, 226, 0.745);
+}
+
+.grid {
+  display: grid;
+}
+
+.grid-cols-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+/********************* 
+*     HEADER
+**********************/
+
+.box-navigation {
+  height: 8rem;
+  display: flex;
+  padding: 0.5rem 3rem;
+  justify-content: space-between;
+  background-color: rgba(18, 154, 125, 0.2);
+  align-items: center;
+}
+
+.box-navigation img {
+  height: 100%;
+}
+
+.hero-list {
+  display: flex;
+  gap: 3rem;
+}
+
+.frase {
+  margin: 3rem 0;
+  font-size: 2.4rem;
+  line-height: 1.6;
+}
+
+.frase-icon {
+  font-size: 3rem;
+  transform: translateY(8px);
+}
+
+.hero-li a {
+  text-decoration: none;
+  font-size: 1.7rem;
+  font-weight: 600;
+  color: #555;
+}
+.hero-li {
+  list-style: none;
+}
+
+.hero {
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 10.4rem 0 5.2rem;
+  background-color: rgba(252, 188, 188, 0.25);
+  border-radius: 1.2rem;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+}
+
+.hero-img img {
+  max-width: 32rem;
+  border-radius: 1.2rem;
+}
+
+.hero-description-wrapper {
+  max-width: 60rem;
+}
+
+.hero-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.hero-fragances span {
+  background-color: #129a7d;
+  display: inline-block;
+  padding: 1rem;
+  border-radius: 6px;
+  color: #f2f2f2;
+}
+
+.hero-cta {
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin-bottom: 2rem;
+}
+
+.hero-icons-wrapper {
+  display: flex;
+  gap: 2rem;
+}
+
+.hero-icon-cta {
+  font-size: 4rem;
+  color: #129a7d;
+}
+
+/********************* 
+*     ESTACIONES
+**********************/
+
+.section-container {
+  max-width: 130rem;
+  margin: 8.6rem auto;
+}
+
+.heading-estaciones {
+  text-align: center;
+  margin-bottom: 6.8rem;
+}
+
+.estaciones-container {
+  background-color: rgba(242, 242, 242, 0.4);
+  max-width: 100rem;
+  margin: 0 auto;
+  padding: 0 4.2rem 6.8rem;
+  border-radius: 6px;
+}
+
+.estaciones-list {
+  display: flex;
+  justify-content: center;
+  margin: 2rem;
+  gap: 3.2rem;
+  transform: translateY(-3rem);
+}
+
+.estacion-item {
+  list-style: none;
+  background-color: #129a7d;
+  border-radius: 6px;
+  padding: 1.2rem 2.4rem;
+  transition: all 0.6s ease-in-out;
+}
+
+.estacion-item a {
+  text-decoration: none;
+  font-size: 2.4rem;
+  color: #f2f2f2;
+}
+
+.box-wrapper-estaciones {
+  justify-content: center;
+}
+
+.estacion-wrapper {
+  display: none;
+  justify-content: center;
+  gap: 6.2rem;
+}
+
+.estacion-wrapper-active {
+  display: flex;
+}
+
+.estacion-active {
+  display: flex;
+}
+
+.product-container img {
+  text-align: center;
+  width: 100%;
+  height: auto;
+}
+
+.product-title {
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin: 1rem 0;
+  text-align: center;
+  color: #129a7d;
+}
+
+.product-container {
+  border-radius: 6px;
+  overflow: hidden;
+  max-width: 40rem;
+}
+
+.product-container img {
+  width: 100%;
+  border-radius: 6px;
+}
+
+.product-description-container {
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.product-tags {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin: 1rem 0 2rem;
+}
+
+.product-tag {
+  list-style: none;
+  font-size: 1.8rem;
+  font-weight: 600;
+  padding: 4px 8px;
+  border-radius: 6px;
+}
+
+.product-description {
+  font-size: 1.4rem;
+  line-height: 1.8;
+  text-align: center;
+}
+
+.estacion-item-active {
+  transform: translateY(-1rem);
+  background-color: #1c7a66;
+}
+
+/********************* 
+*     TUTTI FRUTTI
+**********************/
+.frutti-heading {
+  text-align: center;
+}
+
+.img-wrapper {
+  display: flex;
+  justify-content: center;
+  max-width: 40rem;
+  position: relative;
+}
+
+.img-wrapper img {
+  width: 100%;
+}
+
+.content-wrapper {
+  gap: 4rem;
+  justify-items: center;
+  max-width: 100rem;
+  margin: 0 auto;
+}
+
+.frutti-description {
+  font-size: 1.8rem;
+  line-height: 1.8;
+}
+
+.frutti-description-wrapper {
+  padding: 2rem;
+}
+.frutti-description-wrapper .product-tags {
+  justify-content: start;
+  margin: 2rem 0;
+}
+
+.img-wrapper::before {
+  content: "";
+  position: absolute;
+  height: 60%;
+  width: 60%;
+  background-color: rgba(18, 154, 125, 0.2);
+  transform: translate(-40%, 10%);
+  border-radius: 50%;
+  z-index: -20;
+  transition: all 1s;
+}
+
+.img-wrapper::after {
+  content: "";
+  position: absolute;
+  height: 30%;
+  width: 30%;
+  background-color: rgba(18, 154, 125, 0.2);
+  transform: translate(40%, 60%);
+  border-radius: 50%;
+  z-index: -20;
+  transition: all 1s;
+}
+
+.img-wrapper:hover::before {
+  content: "";
+  position: absolute;
+  height: 70%;
+  width: 70%;
+  background-color: rgba(18, 154, 125, 0.2);
+  transform: translate(40%, 60%);
+  border-radius: 50%;
+  z-index: -20;
+}
+
+.img-wrapper:hover::after {
+  content: "";
+  position: absolute;
+  height: 60%;
+  width: 60%;
+  background-color: rgba(18, 154, 125, 0.2);
+  transform: translate(-40%, 10%);
+  border-radius: 50%;
+  z-index: -20;
+}
+
+/********************* 
+*     Gallery
+**********************/
+
+.gallery {
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.img-wrapper-gallery img {
+  width: 100%;
+}
+
+.img-wrapper-gallery {
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.historia-div {
+  gap: 4rem;
+}
+
+.history-description {
+  font-size: 1.6rem;
+  line-height: 1.7;
+  font-weight: 500;
+  margin: 2rem 0;
+}
+
+.story-header {
+  text-transform: uppercase;
+  color: #129a7d;
+}
