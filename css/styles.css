@@ -165,21 +165,34 @@ html {
   max-width: 120rem;
   margin: 0 auto;
   padding: 10.4rem 0 5.2rem;
-  background-color: rgba(252, 188, 188, 0.25);
   border-radius: 1.2rem;
   border-top-left-radius: 0px;
   border-top-right-radius: 0px;
+  background-image: linear-gradient(
+      to right,
+      rgba(38, 46, 33, 0.5),
+      rgba(44, 30, 43, 0.6)
+    ),
+    url("../css/img/todos3.jpeg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: white;
 }
 
 .hero-img img {
   max-width: 32rem;
   border-radius: 1.2rem;
+  transform: rotate(40deg);
 }
 
 .hero-description-wrapper {
   max-width: 60rem;
 }
 
+.hero-description-wrapper h1 {
+  color: white;
+}
 .hero-container {
   display: flex;
   justify-content: space-around;
@@ -258,7 +271,7 @@ html {
 }
 
 .estacion-wrapper {
-  display: none;
+  display: flex;
   justify-content: center;
   gap: 6.2rem;
 }
@@ -267,8 +280,12 @@ html {
   display: flex;
 }
 
-.estacion-active {
-  display: flex;
+.box-wrapper-estacion {
+  display: none;
+}
+
+.box-wrapper-estacion-active {
+  display: block;
 }
 
 .product-container img {
@@ -282,18 +299,21 @@ html {
   font-weight: 600;
   margin: 1rem 0;
   text-align: center;
+  text-transform: uppercase;
   color: #129a7d;
 }
-
-.product-container {
+z .product-container {
   border-radius: 6px;
   overflow: hidden;
-  max-width: 40rem;
+  width: min(30%, 40rem);
 }
 
 .product-container img {
   width: 100%;
   border-radius: 6px;
+  max-height: 30rem;
+  object-fit: cover;
+  object-position: center;
 }
 
 .product-description-container {
@@ -325,6 +345,22 @@ html {
 .estacion-item-active {
   transform: translateY(-1rem);
   background-color: #1c7a66;
+}
+
+.p-estacion {
+  font-size: 2rem;
+  line-height: 1.8;
+  margin: 2rem 0;
+  text-align: center;
+}
+
+.aroma {
+  font-size: 2rem;
+  font-weight: 600;
+  margin: 1rem 0;
+  text-align: center;
+  text-transform: uppercase;
+  color: #666;
 }
 
 /********************* 
@@ -443,4 +479,69 @@ html {
 .story-header {
   text-transform: uppercase;
   color: #129a7d;
+}
+
+/********************* 
+*     Vendedor description
+**********************/
+.img-background-vender {
+  width: 110rem;
+  margin: 0 auto;
+  text-align: center;
+  padding: 2rem 10rem;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  justify-content: center;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.img-bg {
+  background: linear-gradient(
+      to right,
+      rgba(122, 212, 80, 0.3),
+      rgba(21, 51, 14, 0.8)
+    ),
+    url("/css/img/quiero-vender\ \(1\).jpg");
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  filter: blur(8px);
+  -webkit-filter: blur(1px);
+}
+
+.vendedor-heading {
+  font-size: 2.4rem;
+  margin: 2rem 0;
+  font-weight: 700;
+  color: #52e2c3;
+  text-transform: uppercase;
+}
+
+.vendedor-description {
+  margin: 0 auto;
+  max-width: 70%;
+  font-size: 1.8rem;
+  line-height: 1.8;
+  color: white;
+}
+
+.contactanos {
+  margin: 3rem 0;
+  display: flex;
+  gap: 4rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.contactanos h3 {
+  font-size: 2rem;
+  color: white;
+  font-weight: 700;
 }

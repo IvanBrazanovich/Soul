@@ -2,7 +2,9 @@
  * VARIABLES Y CONSTANTES
  *************************/
 const estacionesSelectFather = document.querySelector(".estaciones-list");
-const estacionesContainerAll = document.querySelectorAll(".estacion-wrapper");
+const estacionesContainerAll = document.querySelectorAll(
+  ".box-wrapper-estacion"
+);
 const btnEstaciones = document.querySelectorAll(".estacion-item");
 /*************************
  * FUNCIONES
@@ -14,7 +16,7 @@ const displayEstaciones = function (e) {
 
   //Remove active from all classes containers
   estacionesContainerAll.forEach((container) =>
-    container.classList.remove("estacion-wrapper-active")
+    container.classList.remove("box-wrapper-estacion-active")
   );
 
   //Remove active from all buttons
@@ -25,7 +27,7 @@ const displayEstaciones = function (e) {
 
   document
     .querySelector(`.${estacion}-container`)
-    .classList.add("estacion-wrapper-active");
+    .classList.add("box-wrapper-estacion-active");
 };
 
 /*************************
